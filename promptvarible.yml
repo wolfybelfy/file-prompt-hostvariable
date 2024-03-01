@@ -1,0 +1,13 @@
+---
+- name: Simple demo playbook with prompt
+  hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: user_name
+      prompt: "What is your name?"
+
+  tasks:
+    - name: Display a greeting message
+      debug:
+        msg: "Hello, {{ user_name }}! Welcome to the interactive playbook."
+

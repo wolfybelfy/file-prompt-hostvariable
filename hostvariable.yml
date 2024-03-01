@@ -1,0 +1,8 @@
+---
+ - name: Host Variable
+   hosts: all
+   tasks: 
+    - name: Host viariable test
+      debug:
+        msg: "{{STRING}}"
+
